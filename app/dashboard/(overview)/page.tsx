@@ -4,20 +4,8 @@ import LatestInvoices from '@/app/ui/dashboard/latest-invoices';
 import { lusitanaFont } from '@/app/ui/fonts';
 import { Suspense } from 'react';
 import { RevenueChartSkeleton, LatestInvoicesSkeleton, CardSkeleton } from '@/app/ui/skeletons';
-
-import {fetchLatestInvoices, fetchCardData } from '@/app/lib/data';
  
 export default async function Page() {
-
-
-  const latestInvoices = await fetchLatestInvoices();
-
-  const {
-    numberOfCustomers,
-    numberOfInvoices,
-    totalPaidInvoices,
-    totalPendingInvoices,
-  } = await fetchCardData();
 
   return (
     <main>
